@@ -53,10 +53,12 @@ public interface Versioned {
     static <T extends Versioned> T getInstance(Class<T> clazz, Object... args) throws UnsupportedOperationException {
 
         Class<T> found;
+        String name = clazz.getName();
+        String clazzName = PACKAGE + ".v" + Bukkit.getMinecraftVersion().replaceAll("\\.", "_") + name.substring(name.lastIndexOf('.'));
         try {
-            found = findClass(PACKAGE + ".v" + Bukkit.getMinecraftVersion().replaceAll("\\.", "_"));
+            found = findClass(clazzName);
         } catch (UncheckedClassNotFoundException e) {
-            throw new UnsupportedOperationException("Class " + clazz +
+            throw new UnsupportedOperationException("Class " + clazzName +
                     " is not currently supported for version " + MinecraftVersion.CURRENT);
         }
 

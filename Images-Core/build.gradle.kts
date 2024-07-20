@@ -4,4 +4,5 @@ dependencies{
     compileOnly("commons-lang:commons-lang:2.6")
     implementation(project(":Images-Common"))
     implementation(project(":nms:NMS_1_20_6","reobf"))
+    implementation(project(":nms:NMS_1_21","reobf"))
 }

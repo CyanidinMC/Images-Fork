@@ -1,11 +1,12 @@
-name: ${project.name}
-version: ${project.version}
+name: Images
+version: 2.3.2
 main: com.andavin.images.Images
 authors: [ 'Andavin' ]
-description: ${project.description}
-website: ${project.url}
+description: A plugin to load and render images on maps.
+website: images.andavin.com
 softdepend: [ 'Multiverse-Core', 'PlotSquared' ]
-dependencies: [ 'ProtocolLib' ]
+depend:
+  - ProtocolLib
 api-version: '1.13'
 folia-supported: true
 commands:

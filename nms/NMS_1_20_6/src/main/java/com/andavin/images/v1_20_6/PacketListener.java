@@ -106,7 +106,7 @@ class PacketListener extends com.andavin.images.PacketListener<ServerboundIntera
         if (!itemData.isEmpty()) {
 
             MapId mapId = itemData.get(DataComponents.MAP_ID);
-            if (mapId.id() >= MapHelper.DEFAULT_STARTING_ID) {
+            if (mapId != null && mapId.id() >= MapHelper.DEFAULT_STARTING_ID) {
 
                 CustomImageSection section = getImageSection(mapId.id());
                 if (section != null) {

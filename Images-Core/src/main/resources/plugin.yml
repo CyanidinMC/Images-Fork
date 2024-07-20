@@ -1,0 +1,15 @@
+name: ${project.name}
+version: ${project.version}
+main: com.andavin.images.Images
+authors: [ 'Andavin' ]
+description: ${project.description}
+website: ${project.url}
+softdepend: [ 'Multiverse-Core', 'PlotSquared' ]
+dependencies: [ 'ProtocolLib' ]
+api-version: '1.13'
+folia-supported: true
+commands:
+  image:
+    description: 'Manage custom images.'
+    usage: '/<command> [create|delete|list|import]'
+    aliases: [ 'customimage', 'images', 'img' ]

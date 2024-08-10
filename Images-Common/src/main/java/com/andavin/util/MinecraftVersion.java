@@ -26,7 +26,9 @@ package com.andavin.util;
 import org.bukkit.Bukkit;
 
 public enum MinecraftVersion {
-    v1_20;
+    v1_20,
+    v1_21,
+    v1_21_1;
 
     /**
      * The current {@link MinecraftVersion} of this server.
@@ -48,6 +50,13 @@ public enum MinecraftVersion {
                 return MinecraftVersion.v1_20;
             }
 
+            case "1.21" -> {
+                return MinecraftVersion.v1_21;
+            }
+
+            case "1.21.1" -> {
+                return MinecraftVersion.v1_21_1;
+            }
             default -> throw new RuntimeException("Unsupported version " + version + " !");
         }
     }
